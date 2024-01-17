@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ressource{% endblock %}
+
+{% block body %}
+
+<div>
+    <h1>Ressource</h1>
+    <div style="margin: 3rem;">
+        <div>Nom : {{ressource.name}}</div>
+        <div>Lien : {{ressource.url}}</div>
+        <div>Epinglé : {{ressource.pinned ? 'Oui' : 'Non'}}</div>
+        <div>Dossier lié : {{ressource.dossier.name}}</div>
+    </div>
+
+
+    <a class="btn" href="{{ path('app_ressource_edit', {id: ressource.id}) }}">Modifier</a>
+    <a class="btn" href="{{ path('app_ressource_delete', {id: ressource.id}) }}">Supprimer</a>
+
+</div>
+{% endblock %}

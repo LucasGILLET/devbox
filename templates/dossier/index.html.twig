@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dossier{% endblock %}
+
+{% block body %}
+
+<div>
+    <h1>Dossier</h1>
+
+    <div class="dossiers" style="display: block; padding-left: 2rem;">
+        <div style="font-size: 50px; margin-bottom: 3rem;">
+            {{dossier.name}}
+        </div>
+        <div class="ressources" style="display: block;">
+        Ressources du dossier :
+            {% if dossier.ressouces %}
+            <div style="display: flex;">
+                {% for res in dossier.ressouces %}
+                <div class="ressource">
+                    <a class="btn" href="{{ path('app_ressource_show', {id: res.id}) }}">{{res.name}}</a>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <a class="btn" href="{{ path('app_dossier_edit', {id: dossier.id}) }}">Modifier</a>
+    <a class="btn" href="{{ path('app_dossier_delete', {id: dossier.id}) }}">Supprimer</a>
+</div>
+{% endblock %}

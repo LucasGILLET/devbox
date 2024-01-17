@@ -1,0 +1,75 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
+  
+  body {
+    background: rgb(52, 52, 52);
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    margin: 4rem 5rem;
+  }
+  
+  .btn {
+    text-decoration : none;
+    background-color: rgb(45, 45, 45);
+  }
+  .btn:hover {
+    background-color: gray;
+  }
+  
+
+  /* dossiers */
+
+  
+    .dossiers {
+        display: flex;
+    }
+
+  .dossier {
+    border-radius: 30%;
+    border: solid gray 5px;
+    padding: 1rem;
+    margin: 5px;
+    transition: all;
+    transition-duration: 200ms;
+    transition: ease-in-out;
+  }
+
+  .dossier:hover {
+    background-color: gray;
+  }
+
+  .dossier a {
+    color: whitesmoke;
+    text-decoration : none;
+  }
+
+
+
+/* ressources */
+
+  .ressources {
+    display: flex;
+}
+
+  .ressource {
+    border-radius: 30%;
+    border: solid gray 5px;
+    padding: 1rem;
+    margin: 5px;
+    transition: all;
+    transition-duration: 200ms;
+    transition: ease-in-out;
+  }
+
+  .ressource:hover {
+    background-color: gray;
+  }
+
+  .ressource a {
+    color: white;
+    text-decoration : none;
+  }

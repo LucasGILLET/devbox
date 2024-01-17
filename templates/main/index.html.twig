@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div>
+    <h2>Ressources épinglées : </h2>
+    <div class="ressources">
+        {% for ressource in ressources %}
+            <div class="ressource">
+                <a class="btn" href="{{ path('app_ressource_show', {id: ressource.id}) }}">{{ressource.name}}</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Dossiers : </h2>
+    <div class="dossiers">
+        {% for dossier in dossiers %}
+            <div class="dossier">
+                <a class="btn" href="{{ path('app_dossier_show', {id: dossier.id}) }}">{{dossier.name}}</a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    <div style="margin-top: 3rem;">
+        <a class="btn" style="color: white; margin: 5rem;" href="{{ path('app_ressource_add', {}) }}">Add a new ressource</a>
+        <a class="btn" style="color: white; margin: 5rem;" href="{{ path('app_dossier_add', {}) }}">Add a new dossier</a>
+    </div>
+</div>
+{% endblock %}
